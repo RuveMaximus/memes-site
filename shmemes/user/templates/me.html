@@ -2,20 +2,26 @@
 
 {% block title %} Страница пользователя {% endblock %}
 {% block content %}
-    <div class="left-item">ПРОФИЛЬ</div>
-    <div class="left-item">ЗАГРУЗИТЬ</div>
-    <div class="left-item">МЕМЫ</div>
-{% endblock %}
-{% block content %}
-    <div class="feed"></div>
-{% endblock %}
-{% block content %}
-    <div class="user">
-        <di class="icon"></div>
-        <div class="name">{{ user }}</div>
-        <div class="numberOfPosts"></div>
-        <div class="status"></div>
-        <button>РЕДАКТИРОВАТЬ ПРОФИЛЬ</button>
-        <button>ВЫХОД</button>
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="left-item">ПРОФИЛЬ</div>
+            <div class="left-item">ЗАГРУЗИТЬ</div>
+            <div class="left-item">МЕМЫ</div>
+        </div>
+        <div class="col">
+            <div class="feed"></div>
+        </div>
+        <div class="col">
+            <div class="user">
+                <div class="icon"></div>
+                <div class="name">{{ user }}</div>
+                <div class="numberOfPosts"></div>
+                <div class="status"></div>
+                <button>РЕДАКТИРОВАТЬ ПРОФИЛЬ</button>
+                <button>ВЫХОД</button>
+            </div>
+        </div>
     </div>
+</div>
 {% endblock %}
