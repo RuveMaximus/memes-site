@@ -3,7 +3,7 @@ from django.urls import path
 from . import views, controller
 
 urlpatterns = [
-    path('', views.feed),
+    path('', views.feed, name='feed'),
 
     path('addpost/', controller.add_post),
     

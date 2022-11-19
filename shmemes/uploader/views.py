@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect
 from .forms import PostForm
 
-def index(request): 
+def uploader(request): 
     form = PostForm()
-    return render(request, 'index.html', {'form': form})
+    return render(request, 'uploader.html', {'form': form})
 
 def publish(request):
     form = PostForm(request.POST, request.FILES)
