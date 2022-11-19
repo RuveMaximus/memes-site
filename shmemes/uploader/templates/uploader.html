@@ -3,6 +3,8 @@
 {% block title %} Загружаем мемы {% endblock %}
 
 {% block content %}
+{% include '_navbar.html' %}
+
 <form method="post" action="{% url 'uploader:publish' %}" enctype="multipart/form-data">
     {% csrf_token %}
     {{ form }}

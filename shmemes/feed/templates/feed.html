@@ -13,10 +13,14 @@
 <div class="container">
   <div class="row">
     <div class="col">
+      <div class="post-author">{{ post.author }}</div>
       <div class="post-text">{{ post.text }}</div>
       <div class="post-img">
         <img src="{{ post.image.url }}" alt="post-image">
       </div>
+      <div class="post-date">{{ post.pub_date }}</div>
+      <div class="post-likes">{{ post.likes }}</div>
+      <div class="post-dislikes">{{ post.dislikes }}</div>
     </div>
   </div>
 </div>
