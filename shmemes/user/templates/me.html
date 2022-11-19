@@ -1,14 +1,12 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block styles %}<link rel="stylesheet" href="{% static 'user/user.css' %}"> {% endblock %}
 {% block title %} Страница пользователя {% endblock %}
 {% block content %}
+{% include '_navbar.html' %}
 <div class="container">
-    <div class="row">
-        <div class="col">
-            <div class="left-item">ПРОФИЛЬ</div>
-            <div class="left-item">ЗАГРУЗИТЬ</div>
-            <div class="left-item">МЕМЫ</div>
-        </div>
+    <div class="column">
         <div class="col">
             <div class="feed"></div>
         </div>
