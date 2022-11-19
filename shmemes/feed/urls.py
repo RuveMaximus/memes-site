@@ -4,6 +4,8 @@ from . import views, controller
 
 urlpatterns = [
     path('', views.feed),
+
+    path('addpost/', controller.add_post),
     
     path('addcomment/', controller.add_comment),
     path('getcomments/', controller.get_comments),
