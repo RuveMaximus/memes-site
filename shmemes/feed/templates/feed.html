@@ -9,53 +9,17 @@
 
 {% include '_navbar.html' %}
 
-<!-- <div class="container-fluid bg-dark text-white">
-  <div class="container section">
-    <div class="row align-items-center text-center">
-      <div class="col">
-        <div class="post-title">{{ post.title }}</div>
-        <div class="post-description">{{ post.description }}</div>
-        <img class="w-100" src="https://24warez.ru/uploads/posts/2015-11/1447172520_3.gif" alt="troll">
+{% for post in posts %}
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <div class="post-text">{{ post.text }}</div>
+      <div class="post-img">
+        <img src="{{ post.image.url }}" alt="post-image">
       </div>
-    </div>
-  </div>
-</div> -->
-<div class="container-fluid bg-dark text-white">
-  <div class="container" style="background-color: #eafc40; height:300vh; width:300vw;">
-    <!-- <div class="col-6 section" >
-        <img class="w-100 rounded mx-auto d-block" src="https://24warez.ru/uploads/posts/2015-11/1447172520_3.gif"
-          alt="troll">
-      </div>
-      <div class="col-6 section">
-        <img class="w-100 rounded mx-auto d-block"
-          src="http://www.quickmeme.com/img/43/43eaabace366a40307922e9973737a9c7511a648395268939c3008e0b81095f9.jpg"
-          alt="troll">
-      </div> -->
-    <!-- <div class="col-6">
-          <img class="w-100 rounded mx-auto d-block"
-          src="https://24warez.ru/uploads/posts/2015-11/1447172520_3.gif"
-          alt="troll">  
-        </div> -->
-    <div class="row r1">
-      <div class="col-4 cont"></div>
-      <div class="col-4 cont">
-        <div class="container">
-          <img class="w-100 rounded mx-auto d-block"
-            src="http://www.quickmeme.com/img/43/43eaabace366a40307922e9973737a9c7511a648395268939c3008e0b81095f9.jpg"
-            alt="troll">
-        </div>
-      </div>
-      <div class="col-4 cont"></div>
-    </div>
-    <div class="row r2">
-      <div class="col-4 cont"></div>
-      <div class="col-4 cont">
-        <img class="w-100 rounded mx-auto d-block" src="https://24warez.ru/uploads/posts/2015-11/1447172520_3.gif"
-          alt="troll">
-      </div>
-      <div class="col-4 cont"></div>
     </div>
   </div>
 </div>
+{% endfor %}
 
 {% endblock %}

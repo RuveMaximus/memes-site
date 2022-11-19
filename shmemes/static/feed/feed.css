@@ -1,9 +1,16 @@
-.r1{
-    background-color: green;
+.post-img {
+    max-height: 25rem;
+    max-width: 25rem;
+
+    display: flex;
+    align-items: center;
+    
+    margin: 0 auto;
+
+    overflow: hidden;
 }
-.r2{
-    background-color: red;
-}
-.cont{
-    margin-top:5%;
-}
+
+.post-img img {
+    width: 100%;
+    height: auto;
+}   
