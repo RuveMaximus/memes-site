@@ -4,25 +4,19 @@
 {% block title %} Профиль {% endblock %}
 {% block content %}
 {% include '_navbar.html' %}
-<div class="container">
+<div class="container-fluid" style="background-color: #212121;">
     <div class="column">
         <div class="col">
-            <div class="container">
-                <div class="row">
+            <div class="container" style="padding: 15px;">
+                <div class="row align-items-center">
                     <div class="col-md-9">
-                        <div class="container">
-                            <div class="column">
-                                <div class="col">
-                                    <img class="rounded mx-auto d-block" src="https://www.meme-arsenal.com/memes/9920c919d479c5d1275c84761b9e22ba.jpg" alt="photo" width: 10%>
-                                </div>
-                                <div class="col">
-                                    {{ user }}
-                                </div>
-                                <div class="col">
-                                    Описание
-                                </div>
+                        <div class="card" style="border: none; width: 18rem; color:#f2f2f2; background-color: #212121;">
+                            <img class="mx-auto card-img-top rounded" src="https://img5.goodfon.ru/wallpaper/nbig/3/9c/space-planet-landscape-wallpapers-1920-x-1080.jpg" alt="photo"">
+                            <div class="card-body">
+                              <h5 class="card-title">{{ user }}</h5>
+                              <p class="card-text">Описание</p>
                             </div>
-                        </div>
+                          </div>
                     </div>
                     <div class="col-md-3">
                         <ul class="list-group">
