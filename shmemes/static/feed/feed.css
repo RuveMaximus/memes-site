@@ -27,13 +27,11 @@
 .div-img{
     max-height: 37rem;
     max-width: 37rem;
-
     display: flex;
-    align-items: center;
-    
+    align-items: center; 
     margin: 0 auto;
-
     overflow: hidden;
+    position: relative;
 }
 
 .card-img-top{
@@ -49,12 +47,17 @@
 }
 
 .like{
-    margin-left:80%;
+    right: 0;
+}
+
+.dislike{
+    left: 0;
 }
 
 .comment{
-    margin-top:40%;
-    margin-left:40%;
+    bottom: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
 }
 
 .div-img:hover .like{
