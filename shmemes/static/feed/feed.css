@@ -1,4 +1,4 @@
-.post-img {
+/* .post-img {
     max-height: 25rem;
     max-width: 25rem;
 
@@ -13,4 +13,36 @@
 .post-img img {
     width: 100%;
     height: auto;
-}   
+}    */
+
+.row{
+    padding-top:5%;
+}
+
+.card{
+    max-width:40rem;
+    max-height:45rem;
+}
+
+.div-img{
+    max-height: 37rem;
+    max-width: 37rem;
+
+    display: flex;
+    align-items: center;
+    
+    margin: 0 auto;
+
+    overflow: hidden;
+}
+
+.card-img-top{
+    width:100%;
+    height:auto;
+}
+
+.otmetki{
+    position:absolute;
+    width:100px;
+    height:100px;
+}
