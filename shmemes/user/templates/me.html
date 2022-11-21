@@ -5,46 +5,45 @@
 {% block content %}
 {% include '_navbar.html' %}
 <div class="container-fluid" style="background-color: #212121;">
-    <div class="column">
-        <div class="col">
-            <div class="container" style="padding: 15px;">
-                <div class="row align-items-center">
-                    <div class="col-md-9">
-                        <div class="card" style="border: none; width: 18rem; color:#f2f2f2; background-color: #212121;">
-                            <img class="mx-auto card-img-top rounded" src="https://img5.goodfon.ru/wallpaper/nbig/3/9c/space-planet-landscape-wallpapers-1920-x-1080.jpg" alt="photo"">
-                            <div class="card-body">
-                              <h5 class="card-title">{{ user }}</h5>
-                              <p class="card-text">Описание</p>
-                            </div>
-                          </div>
+    <div class="container" style="background-color: #eafc40;">
+        <div class="row">
+            <div class="col-md-9">
+                <div class="card">
+                    <div class="div-img">
+                    <!-- <img src="https://img1.akspic.ru/attachments/crops/2/2/4/0/50422/50422-senokosnoye_ugodye-pole-selskoe_hozyajstvo-zakat-risovoe_pole-2560x1440.jpg"
+                        class="card-img-top" alt="..."> -->
+                        <img src="https://jo-jo.ru/uploads/posts/2010-03/1269430299_41.jpg" class="card-img-top" alt="">
                     </div>
-                    <div class="col-md-3">
-                        <ul class="list-group">
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Постов
-                            <span class="badge bg-primary rounded-pill">1</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Лайков
-                            <span class="badge bg-primary rounded-pill">98</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Дизлайков
-                                <span class="badge bg-primary rounded-pill">2</span>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
-                                Комментариев
-                                <span class="badge bg-primary rounded-pill">12</span>
-                            </li>
-                        </ul>
+                    <div class="card-body">
+                        <p class="card-text">{{user}}</p>
                     </div>
                 </div>
             </div>
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Постов
+                        <span class="badge bg-primary rounded-pill">1</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Лайков
+                        <span class="badge bg-primary rounded-pill">98</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Дизлайков
+                        <span class="badge bg-primary rounded-pill">2</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-center">
+                        Комментариев
+                        <span class="badge bg-primary rounded-pill">12</span>
+                    </li>
+                </ul>
+            </div>
         </div>
-        <div class="col">
-            <span class="border border-info">
-                <img class="rounded mx-auto d-block" src="https://sun4-10.userapi.com/impg/sGW9OuLxEkkxlXb3rzSW-nZ3rC5qAwHDpQUnuA/CdjyP-ulkPE.jpg?size=675x617&quality=95&sign=80757a15d2dc47902bb8df6cafc0361c&type=album" alt="politex">
-            </span>
+        <div class="row">
+            <img class="rounded mx-auto d-block"
+                src="https://sun4-10.userapi.com/impg/sGW9OuLxEkkxlXb3rzSW-nZ3rC5qAwHDpQUnuA/CdjyP-ulkPE.jpg?size=675x617&quality=95&sign=80757a15d2dc47902bb8df6cafc0361c&type=album"
+                alt="politex">
         </div>
     </div>
 </div>
