@@ -20,13 +20,13 @@
 }
 
 .card{
-    max-width:39rem;
-    max-height:1000000000000000000rem;
+    max-width: 39rem;
+    max-height: 1000rem;
 }
 
 .card-body{
-    max-width:39rem;
-    max-height:1000000000000000000rem;
+    max-width: 39rem;
+    max-height: 1000rem;
 }
 
 .div-img{
@@ -44,20 +44,25 @@
     height:auto;
 }
 
-.otmetki{
+.vote-icon{
     position:absolute;
-    width:10%;
-    height:10%;
+    width:32px;
+    height:auto;
+}
+
+.class1 > .class2 
+
+.post-likes,
+.post-dislikes {
+    position: absolute;
 }
 
 .post-likes{
-    position:absolute;
     opacity:0;
-    right: 0;
+    right: 40px;
 }
 
 .post-dislikes{
-    position:absolute;
     opacity:0;
     left: 0;
 }

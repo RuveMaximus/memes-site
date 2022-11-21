@@ -32,18 +32,18 @@
   {% for post in posts %}
   <div class="row">
     <div class="col">
-      <div class="card mx-auto">
+      <div class="card mx-auto" data-post="{{ post.pk }}">
         <div class="div-img">
           <img src="{{ post.image.url }}" class="card-img-top" alt="...">
           <div class="post-likes">
-            <img src="https://www.svgrepo.com/show/22870/like.svg" class="otmetki like" alt="...">
+            <img src="{% static 'images/feed/like.svg' %}" class="vote-icon like" alt="...">
             <p>{{ post.likes }}</p>
           </div>
           <div class="post-dislikes">
-            <img src="https://www.svgrepo.com/show/111666/dislike.svg" class="otmetki dislike" alt="...">
+            <img src="{% static 'images/feed/dislike.svg' %}" class="vote-icon dislike" alt="...">  <!-- Повесить обработчик события нажатия -->
             <p>{{ post.dislikes }}</p>
           </div>
-          <img src="https://www.svgrepo.com/show/379126/comment.svg" class="otmetki comment" alt="...">
+          <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
         </div>
         <div class="card-body">
           <p class="card-text">
