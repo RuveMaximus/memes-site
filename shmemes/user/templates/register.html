@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <input id="username" type="text" placeholder="Придумайте логин">
+    <input id="password" type="password" placeholder="Придумайте пароль">
+
+    <button onclick="register()">Зарегистрироваться</button>
+    <a href="/user/login/">Уже есть аккаунт?</a>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'user/script.js' %}"></script>
+{% endblock %}

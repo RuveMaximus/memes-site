@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <input id="username" type="text" placeholder="Логин">
+    <input id="password" type="password" placeholder="Пароль">
+
+    <button onclick="login()">Войти</button>
+    <a href="/user/register/">Впервые у нас?</a>
+{% endblock %}
+
+{% block scripts %}
+<script src="{% static 'user/script.js' %}"></script>
+{% endblock %}

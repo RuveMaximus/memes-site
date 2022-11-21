@@ -7,7 +7,10 @@ urlpatterns = [
     path('me/', views.me, name='me'),
     path('<int:user_id>/', views.another_user),
 
-    path('login/', controller.user_login, name='login'),
-    path('logout/', controller.user_logout, name='logout'),
-    path('register/', controller.user_register, name='registration'),
+    path('login/', views.user_login, name='login'),
+    path('register/', views.user_register, name='registration'),
+
+    path('api/login/', controller.user_login),
+    path('api/logout/', controller.user_logout),
+    path('api/register/', controller.user_register),
 ]
