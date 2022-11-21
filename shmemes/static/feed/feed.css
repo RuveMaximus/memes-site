@@ -20,13 +20,18 @@
 }
 
 .card{
-    max-width:40rem;
-    max-height:45rem;
+    max-width:39rem;
+    max-height:1000000000000000000rem;
+}
+
+.card-body{
+    max-width:39rem;
+    max-height:1000000000000000000rem;
 }
 
 .div-img{
-    max-height: 10rem;
-    max-width: 37rem;
+    max-height: 39rem;
+    max-width: 39rem;
     display: flex;
     align-items: center; 
     margin: 0 auto;
@@ -43,14 +48,17 @@
     position:absolute;
     width:10%;
     height:10%;
-    opacity:0;
 }
 
-.like{
+.post-likes{
+    position:absolute;
+    opacity:0;
     right: 0;
 }
 
-.dislike{
+.post-dislikes{
+    position:absolute;
+    opacity:0;
     left: 0;
 }
 
@@ -60,11 +68,11 @@
     transform: translateX(-50%);
 }
 
-.div-img:hover .like{
+.div-img:hover .post-likes{
     opacity:1;
 }
 
-.div-img:hover .dislike{
+.div-img:hover .post-dislikes{
     opacity:1;
 }
 
