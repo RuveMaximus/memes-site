@@ -7,7 +7,7 @@ def uploader(request):
     form = PostForm()
     return render(request, 'uploader.html', {'form': form})
 
-
+@login_required(login_url='/user/login/')
 def publish(request):
     form = PostForm(request.POST, request.FILES)
     if form.is_valid():
