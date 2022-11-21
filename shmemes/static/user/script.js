@@ -4,7 +4,11 @@ async function login() {
 
     const response = await requestPost('/user/api/login/', {'username': user_login.value, 'password': user_password.value});
 
-    if (response.status === 'fail') alert('Ошибка выполнения запроса')
+    console.log(response.status);
+
+    if (response.status === 'ok') {
+        document.location.href = '/feed/';
+    }
 }
 
 
@@ -14,5 +18,9 @@ async function register() {
     
     const response = await requestPost('/user/api/register/', {'username': user_login.value, 'password': user_password.value});
 
-    if (response.status === 'fail') alert('Ошибка выполнения запроса')
+    console.log(response.status);
+    
+    if (response.status === 'ok') {
+        document.location.href = '/user/login/';
+    }
 }
