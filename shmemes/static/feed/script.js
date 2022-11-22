@@ -7,7 +7,6 @@ async function like(elem) {
     console.log(response.status);
 }
 async function dislike(elem) {
-    console.log(elem)
     const url = '/feed/api/dislike/'
     const post_elem = elem.closest('.card')
 
