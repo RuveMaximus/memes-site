@@ -18,7 +18,7 @@ def add_comment(request):
         return JsonResponse({"status": 'ok'})
     except Exception as e:
         print(e)
-        return JsonResponse({'status': 'server fail'})
+        return JsonResponse({'status': 'fail'})
 
 @csrf_exempt
 def get_comments(request): 
@@ -37,6 +37,8 @@ def like(request):
     post.likes += 1
     post.save()
 
+    return JsonResponse({'status': 'ok'})
+
 @csrf_exempt
 def dislike(request):
     data = json.loads(request.body.decode('utf-8'))
@@ -44,3 +46,5 @@ def dislike(request):
     post = Post.objects.get(pk=post_id)
     post.dislikes += 1
     post.save()
+
+    return JsonResponse({'status': 'ok'})
