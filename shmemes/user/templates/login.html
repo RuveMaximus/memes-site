@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block content %}
-    <input id="username" type="text" placeholder="Логин">
-    <input id="password" type="password" placeholder="Пароль">
+    <div style="display: flex;">
+        <input id="username" type="text" placeholder="Логин">
+        <input id="password" type="password" placeholder="Пароль">
 
-    <button onclick="login()">Войти</button>
-    <a href="/user/register/">Впервые у нас?</a>
+        <button onclick="login()">Войти</button>
+        <a href="/user/register/">Впервые у нас?</a>
+    </div>
 {% endblock %}
 
 {% block scripts %}

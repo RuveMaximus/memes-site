@@ -2,11 +2,13 @@
 {% load static %}
 
 {% block content %}
-    <input id="username" type="text" placeholder="Придумайте логин">
-    <input id="password" type="password" placeholder="Придумайте пароль">
+    <div class="'items">
+        <input class="item" id="username" type="text" placeholder="Придумайте логин">
+        <input class="item" id="password" type="password" placeholder="Придумайте пароль">
 
-    <button onclick="register()">Зарегистрироваться</button>
-    <a href="/user/login/">Уже есть аккаунт?</a>
+        <button class="item" onclick="register()">Зарегистрироваться</button>
+        <a class="item" href="/user/login/">Уже есть аккаунт?</a>
+    </div>
 {% endblock %}
 
 {% block scripts %}
