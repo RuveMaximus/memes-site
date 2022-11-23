@@ -12,7 +12,7 @@ def add_comment(request):
     post_id = data.get('post_id')
     comment_text = data.get('text')
     try:
-        comment = Comment(author_id=request.user, post_id=post_id, text=comment_text)
+        comment = Comment(author=request.user, post_id=post_id, text=comment_text)
         comment.save()
 
         return JsonResponse({"status": 'ok'})
@@ -22,12 +22,13 @@ def add_comment(request):
 
 @csrf_exempt
 def get_comments(request): 
+    # Сделать отображение пользователя в виде имени и ссылки 
     data = json.loads(request.body.decode('utf-8'))
-
     post_id = data.get('post_id')
 
-    post_comments = Comment.objects.filter(post_id=post_id)
-    return JsonResponse(post_comments)
+    post_comments = Comment.objects.filter(post_id=post_id).values('author', 'text')
+
+    return JsonResponse({'status': 'ok', 'comments': list(post_comments)})
 
 @csrf_exempt
 def like(request): 
