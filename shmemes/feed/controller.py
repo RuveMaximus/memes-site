@@ -4,6 +4,8 @@ from django.contrib.auth.decorators import login_required
 from django.views.decorators.csrf import csrf_exempt
 import json
 
+from django.contrib.auth.models import User
+
 @login_required(login_url='/user/login/')
 @csrf_exempt
 def add_comment(request):
@@ -22,13 +24,14 @@ def add_comment(request):
 
 @csrf_exempt
 def get_comments(request): 
-    # Сделать отображение пользователя в виде имени и ссылки 
     data = json.loads(request.body.decode('utf-8'))
     post_id = data.get('post_id')
-
-    post_comments = Comment.objects.filter(post_id=post_id).values('author', 'text')
-
-    return JsonResponse({'status': 'ok', 'comments': list(post_comments)})
+    post_comments = list(Comment.objects.filter(post_id=post_id).values('author', 'text'))
+    
+    for comment in post_comments: 
+        comment['author'] = {'id': comment['author'], 'name': str(User.objects.get(pk=comment['author']))}
+    
+    return JsonResponse({'status': 'ok', 'comments': post_comments})
 
 @csrf_exempt
 def like(request): 

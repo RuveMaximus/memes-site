@@ -14,7 +14,7 @@ async function dislike(elem) {
     console.log(response.status);
 }
 
-async function get_comments() {
+async function get_comments(elem) {
     const url = '/feed/api/getcomments/';
     const post_elem = elem.closest('.card')
     const data = {
@@ -24,7 +24,7 @@ async function get_comments() {
     console.log(response);
 }
 
-async function add_comment() {
+async function add_comment(elem) {
     const url = '/feed/api/addcomment/';
     const post_elem = elem.closest('.card')
     const data = {
