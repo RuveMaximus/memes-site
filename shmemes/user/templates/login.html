@@ -1,14 +1,18 @@
 {% extends 'base.html' %}
 {% load static %}
 
-{% block content %}
-    <div class="d-flex">
-        <input id="username" type="text" placeholder="Логин">
-        <input id="password" type="password" placeholder="Пароль">
+{% block styles %}
+<link rel="stylesheet" href="{% static 'user/form.css' %}">
+{% endblock %}
 
-        <button onclick="login()">Войти</button>
-        <a href="/user/register/">Впервые у нас?</a>
-    </div>
+{% block content %}
+<div class="d-inline-flex flex-column">
+    <input class="p-2" id="username" type="text" placeholder="Логин">
+    <input class="p-2" id="password" type="password" placeholder="Пароль">
+
+    <button class="p-2" onclick="login()">Войти</button>
+    <a class="p-2" href="/user/register/">Впервые у нас?</a>
+</div>
 {% endblock %}
 
 {% block scripts %}

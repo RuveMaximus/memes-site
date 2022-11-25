@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block styles %} 
+<link rel="stylesheet" href="{% static 'user/form.css' %}">
+{% endblock %}
+
 {% block content %}
     <div class="items">
         <input class="item" id="username" type="text" placeholder="Придумайте логин">
