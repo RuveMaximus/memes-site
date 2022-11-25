@@ -15,6 +15,10 @@
     height: auto;
 }    */
 
+.container-fluid{
+    background-color: #333333;
+}
+
 .row{
     padding-top:5%;
 }
@@ -27,6 +31,7 @@
 .card-img-top{
     width:100%;
     height:auto;
+    transition: filter 0.5s ease;
 }
 
 .card-body{
@@ -35,7 +40,7 @@
 }
 
 .div-img{
-    max-height: 39rem;
+    max-height: 30rem;
     max-width: 39rem;
     display: flex;
     align-items: center; 
@@ -49,6 +54,7 @@
     position: absolute;
     height:50px;
     width:32px;
+    opacity:0;
 }
 
 .vote-icon{
@@ -58,7 +64,8 @@
 }
 
 .post-likes{
-    right:0;
+    right:50%;
+    transition: right 1s ease;
 }
 
 .like{
@@ -67,37 +74,43 @@
 
 .likes-number{
     margin-top:2rem;
-    margin-left:1.8rem;
+    text-align: center;
 }
 
 .post-dislikes{
-    left: 0;
+    left: 50%;
+    transition: left 1s ease;
 }
 
 .dislikes-number{
     margin-top:2rem;
-    margin-left:0.7rem;
+    text-align: center;
 }
 
 .comment{
     opacity:0;
-    bottom: 0;
+    bottom: 50%;
     margin-left: 50%;
     transform: translateX(-50%);
+    transition: bottom 1s ease;
 }
 
 .div-img:hover .card-img-top{
-    filter: blur(5px)
+    filter: blur(7px)
+    
 }
 
 .div-img:hover .post-likes{
     opacity:1;
+    right:15px;
 }
 
 .div-img:hover .post-dislikes{
     opacity:1;
+    left:15px;
 }
 
 .div-img:hover .comment {
     opacity:1;
+    bottom:15px;
 }

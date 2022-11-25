@@ -28,11 +28,14 @@
 
 
 
-<div class="container-fluid bg-dark">
+<div class="container-fluid">
   {% for post in posts %}
   <div class="row">
     <div class="col">
-      <div class="card mx-auto" data-post="{{ post.pk }}">
+      <div class="card mx-auto text-bg-dark border-primary" data-post="{{ post.pk }}">
+        <div class="card-body">
+          <p class="card-author">{{ post.author }}</p>
+        </div>
         <div class="div-img">
           <img src="{{ post.image.url }}" class="card-img-top" alt="...">
           <div class="post-likes" onclick="like(this)">
@@ -49,7 +52,6 @@
           <p class="card-text">
             {{ post.text }}
           </p>
-          <p class="card-author">{{ post.author }}</p>
           <p class="card-date">{{ post.pub_date }}</p>
         </div>
       </div>
