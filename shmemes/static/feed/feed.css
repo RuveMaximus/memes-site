@@ -63,6 +63,7 @@
     height:auto;
 }
 
+
 .post-likes{
     right:50%;
     transition: right 1s ease;
@@ -82,17 +83,32 @@
     transition: left 1s ease;
 }
 
-.dislikes-number{
-    margin-top:2rem;
-    text-align: center;
-}
-
-.comment{
+.btn-comment{
+    position:absolute;
+    height:50px;
+    width:32px;
     opacity:0;
     bottom: 50%;
     margin-left: 50%;
     transform: translateX(-50%);
     transition: bottom 1s ease;
+}
+
+.button {
+    padding: 0;
+    border: none;
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+}
+
+.comment{
+    top:0;
+}
+
+.dislikes-number{
+    margin-top:2rem;
+    text-align: center;
 }
 
 .div-img:hover .card-img-top{
@@ -110,7 +126,7 @@
     left:15px;
 }
 
-.div-img:hover .comment {
+.div-img:hover .btn-comment {
     opacity:1;
     bottom:15px;
 }
