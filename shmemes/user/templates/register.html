@@ -6,12 +6,12 @@
 {% endblock %}
 
 {% block content %}
-    <div class="items">
-        <input class="item" id="username" type="text" placeholder="Придумайте логин">
-        <input class="item" id="password" type="password" placeholder="Придумайте пароль">
+    <div class="d-inline-flex flex-column">
+        <input class="p-2 m-1" id="username" type="text" placeholder="Придумайте логин">
+        <input class="p-2 m-1" id="password" type="password" placeholder="Придумайте пароль">
 
-        <button class="item" onclick="register()">Зарегистрироваться</button>
-        <a class="item" href="/user/login/">Уже есть аккаунт?</a>
+        <button class="p-2 m-1" onclick="register()">Зарегистрироваться</button>
+        <a class="p-2 m-1" href="/user/login/">Уже есть аккаунт?</a>
     </div>
 {% endblock %}
 
