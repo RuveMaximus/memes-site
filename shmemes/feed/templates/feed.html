@@ -4,7 +4,6 @@
 {% block title %} Демо Bootstrap {% endblock %}
 {% block styles %}
 <link rel="stylesheet" href="{% static 'feed/feed.css' %}"> {% endblock %}
-
 {% block content %}
 
 {% include '_navbar.html' %}
@@ -43,7 +42,7 @@
             <p class="likes-number">{{ post.likes }}</p>
           </div>
           <div class="post-dislikes" onclick="dislike(this)">
-            <img src="{% static 'images/feed/dislike.svg' %}" class="vote-icon dislike" alt="...">
+            <i class="bi bi-heartbreak vote-icon dislike"></i>
             <p class="dislikes-number">{{ post.dislikes }}</p>
           </div>
           <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
