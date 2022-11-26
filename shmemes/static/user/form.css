@@ -36,9 +36,8 @@ button{
     height: 43px;
     background-color: #0D99FF;
     color: #0f0f0f;
-    font-weight: 600;
+    font-weight: 400;
 }
-
 button:hover{
     background-color: #73c0ff;
     transition: transform .2s;
