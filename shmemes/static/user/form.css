@@ -7,3 +7,60 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+input, button{
+    width: 250px;
+    height: 40px;
+    background-color: #1d1d11;
+    color: #ffffff;
+    font-size: 20px !important;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px !important;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active{
+    -webkit-box-shadow: 0 0 0 30px #1d1d11 inset !important;
+}
+input:hover{
+    background-color: #212121;
+}
+input:focus{
+    background-color: #212121;
+    border: none;
+    outline: 3px solid #a9a9a9;
+}
+
+
+button{
+    height: 43px;
+    background-color: #006aff;
+    color: #ffffff;
+    font-weight: 400;
+    border: none;
+}
+button:hover{
+    background-color: #1152ad;
+    transition: transform .2s;
+    transform: scale(1.05);
+}
+
+button:active{
+    background-color: #212121;
+    box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 1);
+}
+
+
+a{
+    text-align: center;
+    font-size: 18px !important;
+    color: #727272 !important;
+    text-decoration: none !important;
+}
+
+a:hover{
+    transition: transform .3s;
+    color: #a9a9a9 !important;
+    transform: scale(1.05);
+}

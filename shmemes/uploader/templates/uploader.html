@@ -1,13 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
-{% block title %} Загружаем мемы {% endblock %}
+{% block title %} Загрузить мем {% endblock %}
+
+{% block styles %}
+<link rel="stylesheet" href="{% static 'uploader/uploader.css' %}">
+{% endblock %}
 
 {% block content %}
 {% include '_navbar.html' %}
 
 <form method="post" action="{% url 'uploader:publish' %}" enctype="multipart/form-data">
-    {% csrf_token %}
-    {{ form }}
-    <button type="submit">Опубликовать</button>
+    <div class="d-inline-flex flex-column">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit">Опубликовать</button>
+    </div>
 </form>
 {% endblock %}
