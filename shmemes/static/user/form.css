@@ -14,7 +14,8 @@ input, button{
     background-color: #1d1d11;
     color: #ffffff;
     font-size: 20px !important;
-    border: 1px solid #0D99FF;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px !important;
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -28,25 +29,25 @@ input:hover{
 input:focus{
     background-color: #212121;
     border: none;
-    outline: 3px solid #92ceff;
+    outline: 3px solid #a9a9a9;
 }
 
 
 button{
     height: 43px;
-    background-color: #0D99FF;
-    color: #0f0f0f;
+    background-color: #006aff;
+    color: #ffffff;
     font-weight: 400;
+    border: none;
 }
 button:hover{
-    background-color: #73c0ff;
+    background-color: #1152ad;
     transition: transform .2s;
     transform: scale(1.05);
 }
 
 button:active{
     background-color: #212121;
-    color: #ffffff;
     box-shadow: 0px 0px 7px 3px rgba(0, 0, 0, 1);
 }
 
@@ -54,12 +55,12 @@ button:active{
 a{
     text-align: center;
     font-size: 18px !important;
-    color: #0d78c4 !important;
+    color: #727272 !important;
     text-decoration: none !important;
 }
 
 a:hover{
     transition: transform .3s;
-    color: #0D99FF !important;
+    color: #a9a9a9 !important;
     transform: scale(1.05);
 }
