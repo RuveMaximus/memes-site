@@ -20,9 +20,7 @@ input, button{
     font-size: 17px !important;
     border: 1px solid #0D99FF;
     margin: 7px !important;
-    min-width: 25px;
-    max-width: auto;
-    overflow:hidden;
+    border-radius: 5px !important;
 }
 
 input[type="text"] {
