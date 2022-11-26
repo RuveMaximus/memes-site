@@ -45,7 +45,9 @@
             <img src="{% static 'images/feed/dislike.svg' %}" class="vote-icon comment" alt="...">
             <p class="dislikes-number">{{ post.dislikes }}</p>
           </div>
-          <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
+          <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#postModal_{{post.pk}}">
+            <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
+          </button>
         </div>
         <div class="card-body">
           <p class="card-text">
@@ -56,6 +58,7 @@
       </div>
     </div>
   </div>
+  {% include '_post_modal.html' %}
   {% endfor %}
   <script src="{% static 'feed/script.js' %}"></script>
 </div>
