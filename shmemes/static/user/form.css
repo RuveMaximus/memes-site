@@ -9,11 +9,11 @@ body {
 }
 
 input, button{
-    width: 28vw;
-    height: 8vh;
+    width: 250px;
+    height: 40px;
     background-color: #1d1d11;
     color: #ffffff;
-    font-size: 4vh !important;
+    font-size: 20px !important;
     border: 1px solid #0D99FF;
 }
 input:-webkit-autofill,
@@ -33,7 +33,7 @@ input:focus{
 
 
 button{
-    height: 8.5vh;
+    height: 43px;
     background-color: #0D99FF;
     color: #0f0f0f;
     font-weight: 600;
@@ -54,7 +54,7 @@ button:active{
 
 a{
     text-align: center;
-    font-size: 3.5vh !important;
+    font-size: 18px !important;
     color: #0d78c4 !important;
     text-decoration: none !important;
 }

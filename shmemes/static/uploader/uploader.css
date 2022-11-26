@@ -14,11 +14,10 @@ form{
     align-items: center;
 }
 input, button{
-    width: 25vw;
-    height: 6vh;
+    width: 300px;
     background-color: #1d1d1d;
     color: #ffffff;
-    font-size: 3vh !important;
+    font-size: 17px !important;
     border: 1px solid #0D99FF;
     margin: 7px !important;
     min-width: 25px;
@@ -26,6 +25,9 @@ input, button{
     overflow:hidden;
 }
 
+input[type="text"] {
+    height: 70px;
+}
 input:hover{
     background-color: #212121;
 }
@@ -37,7 +39,8 @@ input:focus{
 
 
 button{
-    height: 7.5vh;
+    margin-top: 35px !important;
+    height: 50px;
     background-color: #0D99FF;
     color: #0f0f0f;
     font-weight: 600;
@@ -56,6 +59,6 @@ button:active{
 }
 
 label{
-    font-size: 4vh !important;
+    font-size: 20px !important;
     margin-bottom: 3px;
 }
