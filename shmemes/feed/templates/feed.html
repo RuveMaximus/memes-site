@@ -42,7 +42,7 @@
             <p class="likes-number">{{ post.likes }}</p>
           </div>
           <div class="post-dislikes" onclick="dislike(this)">
-            <i class="bi bi-heartbreak vote-icon dislike"></i>
+            <img src="{% static 'images/feed/dislike.svg' %}" class="vote-icon comment" alt="...">
             <p class="dislikes-number">{{ post.dislikes }}</p>
           </div>
           <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
