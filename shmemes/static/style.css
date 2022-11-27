@@ -1,3 +1,7 @@
+:root {
+    --black: #212121;
+}
+
 .row {
     padding: 5%;
 }

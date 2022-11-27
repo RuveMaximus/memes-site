@@ -1,0 +1,34 @@
+{% load static %}
+
+<div class="row">
+    <div class="col">
+        <div class="card mx-auto text-bg-dark border-primary" data-post="{{ post.pk }}">
+            <div class="card-body">
+                <p class="card-author">{{ post.author }}</p>
+            </div>
+            <div class="div-img">
+                <img src="{{ post.image.url }}" class="card-img-top" alt="...">
+                <div class="post-likes" onclick="like(this)">
+                    <img src="{% static 'images/feed/like.svg' %}" class="vote-icon like" alt="...">
+                    <p class="likes-number">{{ post.likes }}</p>
+                </div>
+                <div class="post-dislikes" onclick="dislike(this)">
+                    <img src="{% static 'images/feed/dislike.svg' %}" class="vote-icon comment" alt="...">
+                    <p class="dislikes-number">{{ post.dislikes }}</p>
+                </div>
+                <div class="btn-comment">
+                    <button class="button post-toggler" data-bs-toggle="modal" data-bs-target="#postModal_{{post.pk}}">
+                        <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
+                    </button>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    {{ post.text }}
+                </p>
+                <p class="card-date">{{ post.pub_date }}</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% include '_post_modal.html' %}

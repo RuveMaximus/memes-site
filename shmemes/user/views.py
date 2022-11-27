@@ -2,15 +2,24 @@ from django.shortcuts import render
 from django.http import JsonResponse
 from django.contrib.auth import get_user_model
 from django.contrib.auth.decorators import login_required
+from feed.models import Post
 
 User = get_user_model()
 
 @login_required(login_url='/user/login/')
 def me(request):
-    return render(request, 'me.html', {'user': request.user})
+    posts = Post.objects.filter(author=request.user)
+    post_count = posts.count()
+    return render(request, 'me.html', {
+        'user': request.user, 
+        'posts': posts, 
+        'post_count': post_count,
+    })
 
 def another_user(request, user_id): 
-    return render(request, 'me.html', {'user': User.objects.get(pk=user_id)})
+    user = User.objects.get(pk=user_id)
+    posts = Post.objects.filter(author=user)
+    return render(request, 'me.html', {'user': user, 'posts': posts})
 
 
 def user_login(request):
