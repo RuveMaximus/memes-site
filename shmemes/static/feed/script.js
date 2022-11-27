@@ -1,3 +1,4 @@
+
 async function like(elem) {
     const url = '/feed/api/like/'
     const post_elem = elem.closest('.card')
@@ -26,8 +27,7 @@ async function get_comments(elem) {
         post_id: post_elem.getAttribute('data-post')
     }
     const response = await requestPost(url, data);
-    console.log(response.status);
-    return response;
+    if (response.status === 'ok') location.reload();
 }
 
 
@@ -41,7 +41,7 @@ async function add_comment(elem) {
         text: comment_text.value
     }
     const response = await requestPost(url, data);
-
+    
     if (response.status === 'ok') location.reload();
 }
 
