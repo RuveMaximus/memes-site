@@ -4,14 +4,20 @@ async function like(elem) {
     const post_elem = elem.closest('.card')
 
     const response = await requestPost(url, {post_id: post_elem.getAttribute('data-post')});
-    console.log(response.status);
+    if (response.status === 'ok') {
+        let likes_number = elem.querySelector('.likes-number');
+        likes_number.textContent = +likes_number.textContent + 1; 
+    }
 }
 async function dislike(elem) {
     const url = '/feed/api/dislike/'
     const post_elem = elem.closest('.card')
 
     const response = await requestPost(url, {post_id: post_elem.getAttribute('data-post')});
-    console.log(response.status);
+    if (response.status === 'ok') {
+        let dislikes_number = elem.querySelector('.dislikes-number');
+        dislikes_number.textContent = +dislikes_number.textContent + 1; 
+    }
 }
 
 async function get_comments(elem) {
@@ -36,8 +42,8 @@ async function add_comment(elem) {
         text: comment_text.value
     }
     const response = await requestPost(url, data);
-    console.log(response.status);
-    return response;
+
+    if (response.status === 'ok') location.reload();
 }
 
 document.querySelectorAll('.post-toggler').forEach(btn => {
