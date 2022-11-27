@@ -1,6 +1,7 @@
 from django.contrib.auth import login, logout, authenticate
 from django.http import JsonResponse
 from django.contrib.auth.models import User
+from django.shortcuts import redirect
 
 from django.views.decorators.csrf import csrf_exempt
 import json
@@ -24,7 +25,7 @@ def user_login(request):
 def user_logout(request): 
     logout(request)
 
-    return JsonResponse({'status': 'ok'})
+    return redirect('/user/login/')
 
 @csrf_exempt
 def user_register(request):

@@ -19,7 +19,12 @@ def me(request):
 def another_user(request, user_id): 
     user = User.objects.get(pk=user_id)
     posts = Post.objects.filter(author=user)
-    return render(request, 'me.html', {'user': user, 'posts': posts})
+    post_count = posts.count()
+    return render(request, 'me.html', {
+        'user': request.user, 
+        'posts': posts, 
+        'post_count': post_count,
+    })
 
 
 def user_login(request):
