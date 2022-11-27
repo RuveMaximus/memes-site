@@ -1,5 +1,5 @@
 <!-- Modal -->
-<div class="modal fade" id="postModal_{{post.pk}}" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="postModal_{{post.pk}}" tabindex="-1" aria-hidden="true" data-post="{{ post.pk }}" >
     <div class="modal-dialog modal-dialog-centered modal-xl">
         <div class="modal-content">
             <div class="modal-body p-0">
@@ -17,9 +17,9 @@
                             <div class="commentContainer">
                                 
                             </div>
-                            <div class="input-group" style="bottom: 10px;">
-                                <input id="commentInputField" type="text" class="form-control" placeholder="Ваш комментарий...">
-                                <button class="btn btn-outline-primary" type="button">Отправить</button>
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Ваш комментарий...">
+                                <button class="btn btn-outline-primary" type="button" onclick="add_comment(this)">Отправить</button>
                             </div>
                         </div>
                     </div>

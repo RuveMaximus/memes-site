@@ -25,23 +25,15 @@ async function get_comments(elem) {
     return response;
 }
 
-// async function add_comment(elem) {
-//     const url = '/feed/api/addcomment/';
-//     const post_elem = elem.closest('.card')
-//     const data = {
-//         post_id: post_elem.getAttribute('data-post')
-//     }
-//     const response = await requestPost(url, data);
-//     console.log(response);
-// }
 
 async function add_comment(elem) {
     const url = '/feed/api/addcomment/';
-    const post_elem = elem.closest('.card')
-    const inp_text = elem.closest('.form-control')
+    const post_elem = elem.closest('.modal')
+    const comment_text = elem.closest('.input-group').querySelector('.form-control');
+
     const data = {
         post_id: post_elem.getAttribute('data-post'), 
-        text: inp_text.getAttribute('placeholder')
+        text: comment_text.value
     }
     const response = await requestPost(url, data);
     console.log(response.status);
@@ -50,11 +42,10 @@ async function add_comment(elem) {
 
 document.querySelectorAll('.post-toggler').forEach(btn => {
     btn.addEventListener('click', async function() {
-        
         const post_id = btn.closest('.card').getAttribute('data-post');
         const commentContainer = document.getElementById(`postModal_${post_id}`).querySelector('.commentContainer'); 
+
         
-        console.log(!!commentContainer.textContent);
         
         const response = await get_comments(btn);
         for (let comment of response.comments) {
