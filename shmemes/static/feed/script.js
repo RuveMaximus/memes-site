@@ -45,7 +45,7 @@ document.querySelectorAll('.post-toggler').forEach(btn => {
         const post_id = btn.closest('.card').getAttribute('data-post');
         const commentContainer = document.getElementById(`postModal_${post_id}`).querySelector('.commentContainer'); 
 
-        
+        if (commentContainer.children.length > 0) return;
         
         const response = await get_comments(btn);
         for (let comment of response.comments) {
