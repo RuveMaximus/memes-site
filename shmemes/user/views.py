@@ -12,7 +12,7 @@ def me(request):
     post_count = posts.count()
     return render(request, 'me.html', {
         'user': request.user, 
-        'posts': posts, 
+        'posts': posts.order_by('pub_date')[::-1], 
         'post_count': post_count,
     })
 
@@ -22,7 +22,7 @@ def another_user(request, user_id):
     post_count = posts.count()
     return render(request, 'me.html', {
         'user': request.user, 
-        'posts': posts, 
+        'posts': posts.order_by('pub_date')[::-1], 
         'post_count': post_count,
     })
 
