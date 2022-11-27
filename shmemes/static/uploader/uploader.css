@@ -23,9 +23,6 @@ input, button{
     border-radius: 5px !important;
 }
 
-input[type="text"] {
-    height: 70px;
-}
 input:hover{
     background-color: #212121;
 }
