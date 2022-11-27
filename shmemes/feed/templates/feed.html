@@ -8,25 +8,6 @@
 
 {% include '_navbar.html' %}
 
-<!-- {% for post in posts %}
-<div class="container">
-  <div class="row">
-    <div class="col">
-      <div class="post-author">{{ post.author }}</div>
-      <div class="post-text">{{ post.text }}</div>
-      <div class="post-img">
-        <img src="{{ post.image.url }}" alt="post-image">
-      </div>
-      <div class="post-date">{{ post.pub_date }}</div>
-      <div class="post-likes">{{ post.likes }}</div>
-      <div class="post-dislikes">{{ post.dislikes }}</div>
-    </div>
-  </div>
-</div>
-{% endfor %} -->
-
-
-
 <div class="container-fluid">
   {% for post in posts %}
   <div class="row">
@@ -46,7 +27,7 @@
             <p class="dislikes-number">{{ post.dislikes }}</p>
           </div>
           <div class="btn-comment">
-            <button class="button" data-bs-toggle="modal" data-bs-target="#postModal_{{post.pk}}">
+            <button class="button post-toggler" data-bs-toggle="modal" data-bs-target="#postModal_{{post.pk}}">
               <img src="{% static 'images/feed/comment.svg' %}" class="vote-icon comment" alt="...">
             </button>
           </div>

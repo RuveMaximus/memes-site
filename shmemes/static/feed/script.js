@@ -21,7 +21,8 @@ async function get_comments(elem) {
         post_id: post_elem.getAttribute('data-post')
     }
     const response = await requestPost(url, data);
-    console.log(response);
+    console.log(response.status);
+    return response;
 }
 
 async function add_comment(elem) {
@@ -33,3 +34,31 @@ async function add_comment(elem) {
     const response = await requestPost(url, data);
     console.log(response);
 }
+
+document.querySelectorAll('.post-toggler').forEach(btn => {
+    btn.addEventListener('click', async function() {
+        
+        const post_id = btn.closest('.card').getAttribute('data-post');
+        const commentContainer = document.getElementById(`postModal_${post_id}`).querySelector('.commentContainer'); 
+        
+        console.log(!!commentContainer.textContent);
+        
+        const response = await get_comments(btn);
+        for (let comment of response.comments) {
+            let commentElem = document.createElement('div');
+            commentElem.classList.add('comment-block');
+
+            let commentAuthor = document.createElement('a'); 
+            commentAuthor.setAttribute('href', `/user/${comment.author.id}`);
+            commentAuthor.textContent = `${comment.author.name}: `;
+
+            let commentContent = document.createElement('span'); 
+            commentContent.textContent = comment.text
+
+            commentElem.append(commentAuthor);
+            commentElem.append(commentContent);
+
+            commentContainer.append(commentElem);
+        };
+    })
+});
