@@ -16,7 +16,7 @@
 }    */
 
 .container-fluid{
-    background-color: #333333;
+    background-color: #212121;
 }
 
 .row{
@@ -128,4 +128,8 @@
 .div-img:hover .btn-comment {
     opacity:1;
     bottom:15px;
+}
+
+.modal-content{
+    height:500px;
 }
