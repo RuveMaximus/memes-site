@@ -11,7 +11,6 @@ async function login() {
     }
 }
 
-
 async function register() {
     const user_login = document.getElementById('username');
     const user_password = document.getElementById('password'); 
