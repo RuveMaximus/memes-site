@@ -129,3 +129,11 @@
     opacity:1;
     bottom:15px;
 }
+
+.top-comment{
+    flex: 1 0 auto;
+}
+
+.bot-comment{
+    flex: 0 0 auto;
+}
