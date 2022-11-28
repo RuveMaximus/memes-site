@@ -139,6 +139,7 @@
 }
 
 .commentContainer{
-    height:9rem;
-    overflow:auto;
+    height:10rem;
+    width: 100%;
+    overflow:hidden auto;
 }
