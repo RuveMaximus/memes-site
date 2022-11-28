@@ -2,6 +2,10 @@
     --black: #212121;
 }
 
+body {
+    background-color: var(--black) !important;
+}
+
 .row {
     padding: 5%;
 }

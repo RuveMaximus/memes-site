@@ -8,7 +8,8 @@ async function login() {
 
     if (response.status === 'ok') {
         document.location.href = '/feed/';
-    }
+    } 
+    alert('Неверные имя пользователя или пароль')
 }
 
 async function register() {
