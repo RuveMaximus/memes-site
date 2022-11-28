@@ -137,3 +137,8 @@
 .bot-comment{
     flex: 0 0 auto;
 }
+
+.commentContainer{
+    height:9rem;
+    overflow:auto;
+}
