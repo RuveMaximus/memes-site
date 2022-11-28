@@ -140,5 +140,6 @@
 
 .commentContainer{
     height:10rem;
-    overflow:auto;
+    width: 100%;
+    overflow:hidden auto;
 }
